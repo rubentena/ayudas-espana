@@ -50,7 +50,7 @@ Para ejecutar este proyecto de forma local, solo necesitas un navegador web.
     ```
 2.  **Navega a la carpeta del proyecto:**
     ```
-    cd ayudas-espana-web
+    cd ayudas-espana
     ```
 3.  **Abre `index.html` en tu navegador.**
     -   **Recomendación:** Para evitar posibles problemas con la carga del archivo `ayudas.json` a través del protocolo `file://`, es recomendable usar un servidor local. Si tienes Visual Studio Code, puedes usar la extensión **Live Server**.
@@ -77,15 +77,9 @@ El proyecto está organizado de la siguiente manera para facilitar su mantenimie
 |
 |-- README.md # Este archivo
 
-text
 
 ---
 
-## ⚖️ Licencia
-
-Este proyecto se distribuye bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
-
----
 
 ## 👤 Autor
 
