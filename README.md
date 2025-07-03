@@ -46,7 +46,7 @@ Para ejecutar este proyecto de forma local, solo necesitas un navegador web.
 
 1.  **Clona el repositorio:**
     ```
-    git clone https://github.com/tu-usuario/ayudas-espana-web.git
+    git clone https://github.com/rubentena/ayudas-espana.git
     ```
 2.  **Navega a la carpeta del proyecto:**
     ```
