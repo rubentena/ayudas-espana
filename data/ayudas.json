@@ -1,0 +1,486 @@
+{
+  "ayudas": [
+    {
+      "id": "programa_acogida_refugiados",
+      "nombre": "Programa de Acogida para Protección Internacional",
+      "descripcion": "Sistema estatal que cubre las necesidades básicas (alojamiento, manutención, asistencia jurídica y psicológica) durante el proceso de solicitud de asilo.",
+      "organismo": "Ministerio de Inclusión, Seguridad Social y Migraciones",
+      "tipo": "estatal", "prioridad": 10,
+      "cuantia": "Cobertura integral de necesidades básicas.",
+      "enlace": "https://www.inclusion.gob.es/web/migraciones/programa-de-acogida-y-atencion-a-solicitantes-y-beneficiarios-de-proteccion-internacional",
+      "requisitos": { "estatus_migratorio": ["solicitante_asilo", "proteccion_concedida"] }
+    },
+    {
+      "id": "atencion_humanitaria_irregular",
+      "nombre": "Atención Humanitaria y de Emergencia Social",
+      "descripcion": "Recursos básicos de alojamiento, alimentación y asistencia jurídica ofrecidos por ONGs (Cruz Roja, Cáritas, etc.) y servicios sociales municipales para personas en situación de extrema vulnerabilidad. El acceso depende del empadronamiento y la valoración de los servicios sociales.",
+      "organismo": "ONGs y Ayuntamientos",
+      "tipo": "estatal", "prioridad": 9,
+      "cuantia": "Según valoración de servicios sociales.",
+      "enlace": "https://www.inclusion.gob.es/web/migraciones/atencion-humanitaria",
+      "requisitos": { "estatus_migratorio": "sin_documentacion" }
+    },
+    {
+        "id": "ayuda_retorno_voluntario",
+        "nombre": "Subsidio para Emigrantes Retornados",
+        "descripcion": "Ayuda para trabajadores españoles que regresan a España desde países sin convenio de desempleo con la UE o el EEE.",
+        "organismo": "SEPE",
+        "tipo": "estatal", "prioridad": 8,
+        "cuantia": "480€ mensuales.",
+        "enlace": "https://www.sepe.es/HomeSepe/Personas/distributiva-prestaciones/subsidio-emigrantes-retornados.html",
+        "requisitos": { "estatus_migratorio": "emigrante_retornado", "situacion_laboral": "desempleado" }
+    },
+    {
+        "id": "derecho_educacion_menores",
+        "nombre": "Derecho a la Educación para Menores",
+        "descripcion": "Todos los menores de 18 años tienen derecho a la educación básica gratuita, sin importar su situación administrativa o la de sus padres.",
+        "organismo": "Ministerio de Educación / CCAA",
+        "tipo": "estatal", "prioridad": 10,
+        "cuantia": "Acceso gratuito a la educación obligatoria.",
+        "enlace": "https://www.educacionyfp.gob.es/portada.html",
+        "requisitos": { "edad": ["menor_18"] }
+    },
+    {
+        "id": "derecho_sanidad_urgencias",
+        "nombre": "Derecho a la Asistencia Sanitaria de Urgencia",
+        "descripcion": "Todas las personas, independientemente de su situación administrativa, tienen derecho a recibir atención médica de urgencia en hospitales públicos.",
+        "organismo": "Servicios de Salud / CCAA",
+        "tipo": "estatal", "prioridad": 10,
+        "cuantia": "Cobertura sanitaria de urgencia.",
+        "enlace": "https://www.sanidad.gob.es/",
+        "requisitos": { }
+    },
+    {
+      "id": "ingreso_minimo_vital",
+      "nombre": "Ingreso Mínimo Vital (IMV)",
+      "descripcion": "Prestación para prevenir el riesgo de pobreza en personas y familias sin recursos económicos básicos.",
+      "organismo": "Seguridad Social",
+      "tipo": "estatal", "prioridad": 10,
+      "cuantia": "Entre 604€ y 1.329€ mensuales.",
+      "enlace": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/65bb2fb0-bf4a-4b1a-b9d6-4e05bc5c9a4d",
+      "requisitos": { "estatus_migratorio": ["espanol_o_europeo", "residencia_no_ue", "proteccion_concedida"], "ingresos_mensuales": ["sin_ingresos", "menos_600"] }
+    },
+    {
+      "id": "prestacion_desempleo",
+      "nombre": "Prestación Contributiva por Desempleo (Paro)",
+      "descripcion": "Protege al trabajador que pierde su empleo, siempre que haya cotizado el tiempo mínimo requerido.",
+      "organismo": "SEPE",
+      "tipo": "estatal", "prioridad": 10,
+      "cuantia": "Entre 560€ y 1.575€ mensuales.",
+      "enlace": "https://www.sepe.es/HomeSepe/Personas/distributiva-prestaciones/prestacion-desempleo.html",
+      "requisitos": { "estatus_migratorio": ["espanol_o_europeo", "residencia_no_ue", "proteccion_concedida"], "situacion_laboral": "desempleado", "cotizacion_previa": ["12_a_24_meses", "mas_de_24_meses"] }
+    },
+    {
+      "id": "subsidio_cotizacion_insuficiente",
+      "nombre": "Subsidio por Insuficiencia de Cotización",
+      "descripcion": "Ayuda para quienes han trabajado menos de un año (sin derecho a paro) y tienen responsabilidades familiares.",
+      "organismo": "SEPE",
+      "tipo": "estatal", "prioridad": 8,
+      "cuantia": "480€ mensuales.",
+      "enlace": "https://www.sepe.es/HomeSepe/Personas/distributiva-prestaciones/subsidio-por-insuficiencia-de-cotizacion.html",
+      "requisitos": { "estatus_migratorio": ["espanol_o_europeo", "residencia_no_ue", "proteccion_concedida"], "situacion_laboral": "desempleado", "cotizacion_previa": "menos_12_meses", "hijos_a_cargo": "si" }
+    },
+    {
+      "id": "subsidio_mayores_52",
+      "nombre": "Subsidio para mayores de 52 años",
+      "descripcion": "Subsidio para trabajadores mayores de 52 años que han agotado el paro. Cotiza para la jubilación.",
+      "organismo": "SEPE",
+      "tipo": "estatal", "prioridad": 9,
+      "cuantia": "480€ mensuales.",
+      "enlace": "https://www.sepe.es/HomeSepe/Personas/distributiva-prestaciones/subsidio-para-mayores-de-52-anos.html",
+      "requisitos": { "estatus_migratorio": ["espanol_o_europeo", "residencia_no_ue", "proteccion_concedida"], "edad": ["46_65", "mayor_65"], "situacion_laboral": "desempleado" }
+    },
+    {
+      "id": "subsidio_cume",
+      "nombre": "Prestación por Cuidado de Menor con Enfermedad Grave (CUME)",
+      "descripcion": "Compensa la pérdida de ingresos de progenitores que reducen su jornada para cuidar de un hijo con cáncer u otra enfermedad grave.",
+      "organismo": "Mutua / Seguridad Social",
+      "tipo": "estatal", "prioridad": 9,
+      "cuantia": "100% de la base reguladora por la jornada reducida.",
+      "enlace": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10967/28522",
+      "requisitos": { "hijos_a_cargo": "si", "situacion_laboral": ["empleado", "autonomo"] }
+    },
+    {
+      "id": "ayuda_madre_trabajadora",
+      "nombre": "Deducción por Maternidad (Cheque Bebé)",
+      "descripcion": "Ayuda de 100€/mes para madres con hijos menores de 3 años, con carácter universal independientemente de la situación laboral.",
+      "organismo": "Agencia Tributaria",
+      "tipo": "estatal", "prioridad": 8,
+      "cuantia": "100€ mensuales por hijo.",
+      "enlace": "https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/manual-practico-renta-2023/capitulo-16-deducciones-cuota-integra/deduccion-maternidad/",
+      "requisitos": { "hijos_a_cargo": "si" }
+    },
+    {
+      "id": "prestacion_hijo_a_cargo_discapacidad",
+      "nombre": "Asignación por hijo a cargo con discapacidad",
+      "descripcion": "Prestación económica por cada hijo menor de 18 años con discapacidad igual o superior al 33%, o mayor de 18 con un 65% o más.",
+      "organismo": "Seguridad Social",
+      "tipo": "estatal", "prioridad": 9,
+      "cuantia": "De 1.000€ a 8.158€ anuales, según edad y grado de discapacidad.",
+      "enlace": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10967/28520",
+      "requisitos": { "hijos_a_cargo": "si", "hijo_con_discapacidad": ["si_33", "si_65"] }
+    },
+    {
+      "id": "renta_activa_insercion",
+      "nombre": "Renta Activa de Inserción (RAI)",
+      "descripcion": "Ayuda para colectivos con dificultades especiales: parados de larga duración, personas con discapacidad, emigrantes retornados o víctimas de violencia de género.",
+      "organismo": "SEPE",
+      "tipo": "estatal", "prioridad": 7,
+      "cuantia": "480€ mensuales durante 11 meses.",
+      "enlace": "https://www.sepe.es/HomeSepe/Personas/distributiva-prestaciones/renta-activa-de-insercion.html",
+      "requisitos": { "edad": ["46_65"], "situacion_laboral": "desempleado", "colectivo_especial": ["victima_violencia_genero", "parado_larga_duracion", "emigrante_retornado"] }
+    },
+    {
+      "id": "pension_viudedad",
+      "nombre": "Pensión de Viudedad",
+      "descripcion": "Prestación económica para personas cuyo cónyuge o pareja de hecho ha fallecido.",
+      "organismo": "Seguridad Social",
+      "tipo": "estatal", "prioridad": 9,
+      "cuantia": "Desde 600€ a más de 900€ mensuales.",
+      "enlace": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/PrestacionesPensionistas/MuerteySupervivencia/Viudedad",
+      "requisitos": { "estado_civil": "viudo" }
+    },
+    {
+      "id": "pension_orfandad",
+      "nombre": "Pensión de Orfandad",
+      "descripcion": "Prestación económica para los hijos de la persona fallecida.",
+      "organismo": "Seguridad Social",
+      "tipo": "estatal", "prioridad": 8,
+      "cuantia": "20% de la base reguladora del causante.",
+      "enlace": "https://www.seg-social.es/wps/portal/wss/internet/Pensionistas/PrestacionesPensionesTrabajadores/MuerteySupervivencia/Orfandad",
+      "requisitos": { "edad": ["menor_18", "18_25"] }
+    },
+    {
+      "id": "bono_alquiler_joven",
+      "nombre": "Bono Alquiler Joven",
+      "descripcion": "Ayuda de 250 euros mensuales para facilitar el acceso a la vivienda en alquiler a los jóvenes de hasta 35 años.",
+      "organismo": "Ministerio de Vivienda / CCAA",
+      "tipo": "estatal", "prioridad": 8,
+      "cuantia": "250€ mensuales durante 2 años.",
+      "enlace": "https://www.mitma.gob.es/vivienda/alquiler/bono-alquiler-joven",
+      "requisitos": { "edad": ["18_25", "26_45"], "ingresos_mensuales": ["menos_600", "600_1000", "1000_1500"] }
+    },
+    {
+      "id": "pension_no_contributiva_invalidez",
+      "nombre": "Pensión no Contributiva de Invalidez",
+      "descripcion": "Prestación para ciudadanos con invalidez y necesidad económica que no han cotizado lo suficiente.",
+      "organismo": "IMSERSO / CCAA",
+      "tipo": "estatal", "prioridad": 9,
+      "cuantia": "Aprox. 517,90€ mensuales.",
+      "enlace": "https://www.imserso.es/imserso_01/prestaciones_y_subvenciones/pnc_invalidez/index.htm",
+      "requisitos": { "discapacidad_personal": ["33_a_64", "mas_65"], "edad": ["18_25", "26_45", "46_65"], "ingresos_mensuales": ["sin_ingresos", "menos_600"] }
+    },
+    {
+      "id": "pension_no_contributiva_jubilacion",
+      "nombre": "Pensión no Contributiva de Jubilación",
+      "descripcion": "Asegura a los ciudadanos mayores de 65 años en estado de necesidad una prestación económica.",
+      "organismo": "IMSERSO / CCAA",
+      "tipo": "estatal", "prioridad": 9,
+      "cuantia": "Aprox. 517,90€ mensuales.",
+      "enlace": "https://www.imserso.es/imserso_01/prestaciones_y_subvenciones/pnc_jubilacion/index.htm",
+      "requisitos": { "edad": "mayor_65", "ingresos_mensuales": ["sin_ingresos", "menos_600"] }
+    },
+    {
+      "id": "ayuda_dependencia_cuidados",
+      "nombre": "Prestación para Cuidados en el Entorno Familiar (Dependencia)",
+      "descripcion": "Ayuda de la Ley de Dependencia para que una persona pueda ser atendida por sus cuidadores familiares.",
+      "organismo": "Servicios Sociales / CCAA",
+      "tipo": "estatal", "prioridad": 8,
+      "cuantia": "Hasta 455,40€ mensuales.",
+      "enlace": "https://www.imserso.es/imserso_01/autonomia_personal_dependencia/ley_dependencia/prestaciones_y_servicios/index.htm",
+      "requisitos": { "dependencia_reconocida": ["si_grado_1", "si_grado_2", "si_grado_3"] }
+    },
+    {
+      "id": "ayuda_dependencia_asistencia",
+      "nombre": "Prestación Vinculada al Servicio (Asistencia Profesional)",
+      "descripcion": "Ayuda para contratar servicios de atención profesional (centros de día, ayuda a domicilio).",
+      "organismo": "Servicios Sociales / CCAA",
+      "tipo": "estatal", "prioridad": 8,
+      "cuantia": "Hasta 747,25€ mensuales.",
+      "enlace": "https://www.imserso.es/imserso_01/autonomia_personal_dependencia/ley_dependencia/prestaciones_y_servicios/index.htm",
+      "requisitos": { "dependencia_reconocida": ["si_grado_1", "si_grado_2", "si_grado_3"] }
+    },
+    {
+      "id": "ayuda_familia_numerosa",
+      "nombre": "Beneficios por Título de Familia Numerosa",
+      "descripcion": "Conjunto de beneficios y deducciones fiscales a nivel estatal y autonómico.",
+      "organismo": "Ministerio de Derechos Sociales / CCAA",
+      "tipo": "estatal", "prioridad": 7,
+      "cuantia": "Deducción de 1.200€ a 2.400€ anuales.",
+      "enlace": "https://www.familiasnumerosas.org/conocenos/que-es-ser-familia-numerosa/",
+      "requisitos": { "colectivo_especial": "familia_numerosa" }
+    },
+    {
+      "id": "ayuda_familia_monoparental",
+      "nombre": "Deducción para Familias Monoparentales con dos hijos",
+      "descripcion": "Deducción fiscal de hasta 1.200€ anuales para familias formadas por un solo progenitor con dos hijos a cargo.",
+      "organismo": "Agencia Tributaria",
+      "tipo": "estatal", "prioridad": 7,
+      "cuantia": "Hasta 1.200€ anuales.",
+      "enlace": "https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/manual-practico-renta-2023/capitulo-16-deducciones-cuota-integra/por-familia-numerosa-ascendiente-dos-hijos-o-hijos-discapacidad/contribuyentes-derecho-aplicacion-deduccion.html",
+      "requisitos": { "colectivo_especial": "familia_monoparental" }
+    },
+    {
+        "id": "cese_actividad_autonomos",
+        "nombre": "Prestación por Cese de Actividad (Paro del Autónomo)",
+        "descripcion": "Protección por el cese total en la actividad que originó el alta en el Régimen Especial de Trabajadores Autónomos (RETA).",
+        "organismo": "Mutua / Seguridad Social",
+        "tipo": "estatal", "prioridad": 9,
+        "cuantia": "70% de la base reguladora.",
+        "enlace": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/29161/29168",
+        "requisitos": { "situacion_laboral": "autonomo" }
+    },
+    {
+        "id": "bono_social_termico",
+        "nombre": "Bono Social Térmico",
+        "descripcion": "Ayuda directa para compensar los gastos de calefacción, agua caliente o cocina para los beneficiarios del Bono Social Eléctrico.",
+        "organismo": "Ministerio para la Transición Ecológica",
+        "tipo": "estatal", "prioridad": 6,
+        "cuantia": "Entre 40€ y 375€ anuales.",
+        "enlace": "https://www.miteco.gob.es/es/ministerio/servicios/bono-social/",
+        "requisitos": { "ingresos_mensuales": ["sin_ingresos", "menos_600", "600_1000"] }
+    },
+    {
+        "id": "ayuda_parto_multiple",
+        "nombre": "Prestación por Parto o Adopción Múltiples",
+        "descripcion": "Subsidio especial de pago único cuando el número de hijos nacidos o adoptados es igual o superior a dos.",
+        "organismo": "Seguridad Social",
+        "tipo": "estatal", "prioridad": 8,
+        "cuantia": "Desde 4.536€ (2 hijos) hasta 13.608€ (4 hijos o más).",
+        "enlace": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10967/28520",
+        "requisitos": { "hijos_a_cargo": "si" }
+    },
+    {
+        "id": "becas_mec",
+        "nombre": "Becas y Ayudas al Estudio (MEC)",
+        "descripcion": "Conjunto de becas y ayudas para estudiantes de niveles postobligatorios (Bachillerato, FP, Universidad).",
+        "organismo": "Ministerio de Educación",
+        "tipo": "estatal", "prioridad": 7,
+        "cuantia": "Suma de cuantías fijas (renta, residencia) y una parte variable.",
+        "enlace": "https://www.becaseducacion.gob.es/",
+        "requisitos": { "situacion_laboral": "estudiante" }
+    },
+    {
+        "id": "ayuda_rehabilitacion_vivienda",
+        "nombre": "Ayudas para Rehabilitación Energética de Viviendas",
+        "descripcion": "Subvenciones que cubren un porcentaje del coste de reformas que mejoren la eficiencia energética de la vivienda.",
+        "organismo": "Ministerio de Vivienda / CCAA",
+        "tipo": "estatal", "prioridad": 5,
+        "cuantia": "Hasta el 80% del coste, con límites según la actuación.",
+        "enlace": "https://www.idae.es/ayudas-y-financiacion/para-la-rehabilitacion-de-edificios",
+        "requisitos": { "estatus_migratorio": ["espanol_o_europeo", "residencia_no_ue", "proteccion_concedida"] }
+    },
+    {
+        "id": "tarifa_plana_autonomos",
+        "nombre": "Tarifa Plana para Nuevos Autónomos",
+        "descripcion": "Cuota reducida de 80€ mensuales durante los primeros 12 meses para nuevos trabajadores por cuenta propia.",
+        "organismo": "Seguridad Social",
+        "tipo": "estatal", "prioridad": 8,
+        "cuantia": "80€ mensuales durante 12 meses.",
+        "enlace": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/Afiliacion/10817/31190",
+        "requisitos": { "situacion_laboral": "autonomo" }
+    },
+    {
+        "id": "ayuda_empleada_hogar",
+        "nombre": "Subsidio para Empleadas de Hogar",
+        "descripcion": "Las empleadas de hogar que pierdan su trabajo de forma involuntaria tienen derecho a la prestación por desempleo.",
+        "organismo": "SEPE",
+        "tipo": "estatal", "prioridad": 7,
+        "cuantia": "Según cotización, similar a la prestación general.",
+        "enlace": "https://www.sepe.es/HomeSepe/Personas/distributiva-prestaciones/empleadas-hogar.html",
+        "requisitos": { "situacion_laboral": "desempleado" }
+    },
+    {
+        "id": "ayuda_liberados_prision",
+        "nombre": "Subsidio para Liberados de Prisión",
+        "descripcion": "Prestación para personas que han salido de prisión tras una estancia de más de 6 meses.",
+        "organismo": "SEPE",
+        "tipo": "estatal", "prioridad": 6,
+        "cuantia": "480€ mensuales.",
+        "enlace": "https://www.sepe.es/HomeSepe/Personas/distributiva-prestaciones/subsidio-liberados-de-prision.html",
+        "requisitos": { "situacion_laboral": "desempleado", "colectivo_especial": "liberado_prision" }
+    },
+    {
+        "id": "ayuda_revision_incapacidad",
+        "nombre": "Subsidio por Revisión de Incapacidad",
+        "descripcion": "Ayuda para trabajadores declarados capaces tras una revisión de una incapacidad permanente.",
+        "organismo": "SEPE",
+        "tipo": "estatal", "prioridad": 7,
+        "cuantia": "480€ mensuales.",
+        "enlace": "https://www.sepe.es/HomeSepe/Personas/distributiva-prestaciones/subsidio-por-revision-de-incapacidad.html",
+        "requisitos": { "situacion_laboral": "desempleado", "incapacidad": "incapacidad" }
+    },
+    {
+        "id": "sed",
+        "nombre": "Subsidio Extraordinario por Desempleo (SED)",
+        "descripcion": "Ayuda de carácter extraordinario para personas que han agotado todas las demás prestaciones por desempleo.",
+        "organismo": "SEPE",
+        "tipo": "estatal", "prioridad": 7,
+        "cuantia": "480€ mensuales.",
+        "enlace": "https://www.sepe.es/HomeSepe/Personas/distributiva-prestaciones/subsidio-extraordinario-desempleo.html",
+        "requisitos": { "situacion_laboral": "desempleado", "colectivo_especial": "parado_larga_duracion" }
+    },
+    {
+        "id": "plan_me_cuida",
+        "nombre": "Plan ME CUIDA",
+        "descripcion": "Derecho a la adaptación o reducción de jornada para el cuidado de familiares por circunstancias excepcionales.",
+        "organismo": "Ministerio de Trabajo",
+        "tipo": "estatal", "prioridad": 5,
+        "cuantia": "No es una prestación económica, sino un derecho laboral.",
+        "enlace": "https://www.mites.gob.es/es/Guia/texto/guia_19/index.htm",
+        "requisitos": { "hijos_a_cargo": "si", "situacion_laboral": "empleado" }
+    },
+    {
+        "id": "ayuda_alquiler_general",
+        "nombre": "Ayudas al Alquiler de Vivienda (Plan Estatal)",
+        "descripcion": "Subvenciones para facilitar el pago del alquiler a personas con escasos recursos económicos.",
+        "organismo": "Ministerio de Vivienda / CCAA",
+        "tipo": "estatal", "prioridad": 7,
+        "cuantia": "Hasta el 50% de la renta mensual.",
+        "enlace": "https://www.mitma.gob.es/vivienda/alquiler",
+        "requisitos": { "ingresos_mensuales": ["sin_ingresos", "menos_600", "600_1000"] }
+    }
+  ],
+  "ayudas_autonomicas": [
+    {
+      "id": "rmi_madrid",
+      "nombre": "Renta Mínima de Inserción (RMI) - Madrid",
+      "descripcion": "Prestación económica de la Comunidad de Madrid para unidades familiares sin recursos.",
+      "organismo": "Comunidad de Madrid",
+      "tipo": "autonomico", "prioridad": 7,
+      "cuantia": "Hasta 747,51€ mensuales.",
+      "enlace": "https://www.comunidad.madrid/servicios/asuntos-sociales/renta-minima-insercion",
+      "requisitos": { "comunidad_autonoma": "madrid", "ingresos_mensuales": ["sin_ingresos", "menos_600"], "estatus_migratorio": ["espanol_o_europeo", "residencia_no_ue"] }
+    },
+    {
+      "id": "rgc_cataluna",
+      "nombre": "Renda Garantida de Ciutadania (RGC) - Cataluña",
+      "descripcion": "Prestación social de la Generalitat de Catalunya para garantizar los mínimos de una vida digna.",
+      "organismo": "Generalitat de Catalunya",
+      "tipo": "autonomico", "prioridad": 8,
+      "cuantia": "Desde 754€ hasta 1.290€ mensuales.",
+      "enlace": "https://web.gencat.cat/ca/tramits/tramits-temes/Renda-garantida-de-ciutadania",
+      "requisitos": { "comunidad_autonoma": "cataluna", "ingresos_mensuales": ["sin_ingresos", "menos_600"], "estatus_migratorio": ["espanol_o_europeo", "residencia_no_ue"] }
+    },
+    {
+      "id": "rgi_pais_vasco",
+      "nombre": "Renta de Garantía de Ingresos (RGI) - País Vasco",
+      "descripcion": "Prestación periódica del Gobierno Vasco dirigida a cubrir las necesidades básicas.",
+      "organismo": "Gobierno Vasco (Lanbide)",
+      "tipo": "autonomico", "prioridad": 8,
+      "cuantia": "Desde 800€ hasta 1.100€ mensuales.",
+      "enlace": "https://www.lanbide.euskadi.eus/renta-garantia-ingresos-rgi/",
+      "requisitos": { "comunidad_autonoma": "pais_vasco", "ingresos_mensuales": ["sin_ingresos", "menos_600"], "estatus_migratorio": ["espanol_o_europeo", "residencia_no_ue"] }
+    },
+    {
+      "id": "risga_galicia",
+      "nombre": "Renta de Inclusión Social de Galicia (RISGA)",
+      "descripcion": "Ayuda de la Xunta de Galicia destinada a garantizar recursos económicos de subsistencia.",
+      "organismo": "Xunta de Galicia",
+      "tipo": "autonomico", "prioridad": 7,
+      "cuantia": "Aprox. 469€ mensuales (ampliable).",
+      "enlace": "https://www.xunta.gal/ficheiros/axudas/procedemento-bs626a-risga",
+      "requisitos": { "comunidad_autonoma": "galicia", "ingresos_mensuales": ["sin_ingresos", "menos_600"], "estatus_migratorio": ["espanol_o_europeo", "residencia_no_ue"] }
+    },
+    {
+      "id": "imv_andalucia",
+      "nombre": "Renta Mínima de Inserción Social - Andalucía",
+      "descripcion": "Prestación económica de la Junta de Andalucía para la erradicación de la marginación y la desigualdad.",
+      "organismo": "Junta de Andalucía",
+      "tipo": "autonomico", "prioridad": 7,
+      "cuantia": "Desde 533€ hasta 1.173€ mensuales.",
+      "enlace": "https://www.juntadeandalucia.es/organismos/inclusionsocialjuventudfamiliaseigualdad/areas/inclusion/renta-minima.html",
+      "requisitos": { "comunidad_autonoma": "andalucia", "ingresos_mensuales": ["sin_ingresos", "menos_600"], "estatus_migratorio": ["espanol_o_europeo", "residencia_no_ue"] }
+    },
+    {
+        "id": "rv_inclusion_valencia",
+        "nombre": "Renta Valenciana de Inclusión",
+        "descripcion": "Sistema de garantía de ingresos mínimos de la Generalitat Valenciana.",
+        "organismo": "Generalitat Valenciana",
+        "tipo": "autonomico", "prioridad": 8,
+        "cuantia": "Desde 785€ hasta 1.178€ mensuales.",
+        "enlace": "https://inclusio.gva.es/es/web/integracion-social/renta-valenciana-de-inclusion",
+        "requisitos": { "comunidad_autonoma": "valencia", "ingresos_mensuales": ["sin_ingresos", "menos_600"], "estatus_migratorio": ["espanol_o_europeo", "residencia_no_ue"] }
+    },
+    {
+      "id": "tarxeta_benvida_galicia",
+      "nombre": "Tarxeta Benvida - Galicia",
+      "descripcion": "Ayuda económica de la Xunta para las familias con hijos menores de un año, a través de una tarjeta monedero.",
+      "organismo": "Xunta de Galicia",
+      "tipo": "autonomico", "prioridad": 7,
+      "cuantia": "1.200€ anuales (ampliable).",
+      "enlace": "https://politicasocial.xunta.gal/gl/ambitos/familia-e-infancia/tarxeta-benvida",
+      "requisitos": { "comunidad_autonoma": "galicia", "hijos_a_cargo": "si" }
+    },
+    {
+        "id": "deduccion_nacimiento_madrid",
+        "nombre": "Deducción por nacimiento o adopción - Madrid",
+        "descripcion": "Deducción fiscal en el IRPF por nacimiento o adopción de hijos en la Comunidad de Madrid.",
+        "organismo": "Comunidad de Madrid / Agencia Tributaria",
+        "tipo": "autonomico", "prioridad": 6,
+        "cuantia": "600€ por el primer hijo, 750€ por el segundo, 900€ por el tercero y sucesivos.",
+        "enlace": "https://www.comunidad.madrid/servicios/vivienda/deducciones-impuesto-renta",
+        "requisitos": { "comunidad_autonoma": "madrid", "hijos_a_cargo": "si" }
+    },
+    {
+        "id": "ayuda_alquiler_cataluna",
+        "nombre": "Ayudas al pago del alquiler - Cataluña",
+        "descripcion": "Subvenciones para el pago del alquiler para personas con ingresos bajos o moderados.",
+        "organismo": "Agència de l'Habitatge de Catalunya",
+        "tipo": "autonomico", "prioridad": 7,
+        "cuantia": "Hasta el 40% del alquiler, con un máximo de 200€/mes.",
+        "enlace": "https://web.gencat.cat/es/tramits/tramits-temes/Subvencions-per-al-pagament-del-lloguer",
+        "requisitos": { "comunidad_autonoma": "cataluna", "ingresos_mensuales": ["sin_ingresos", "menos_600", "600_1000", "1000_1500"] }
+    },
+    {
+        "id": "cuota_cero_autonomos_madrid",
+        "nombre": "Cuota Cero para Autónomos - Madrid",
+        "descripcion": "Ampliación de la tarifa plana estatal, cubriendo las cuotas a la Seguridad Social hasta 24 meses para nuevos autónomos.",
+        "organismo": "Comunidad de Madrid",
+        "tipo": "autonomico", "prioridad": 8,
+        "cuantia": "Reembolso total de la cuota mensual.",
+        "enlace": "https://www.comunidad.madrid/servicios/empleo/tarifa-cero-autonomos",
+        "requisitos": { "comunidad_autonoma": "madrid", "situacion_laboral": "autonomo" }
+    },
+    {
+        "id": "plan_adapta_madrid",
+        "nombre": "Plan Adapta - Madrid",
+        "descripcion": "Ayudas para adaptar viviendas y locales, eliminando barreras arquitectónicas para personas con discapacidad o enfermedades raras.",
+        "organismo": "Ayuntamiento de Madrid",
+        "tipo": "autonomico", "prioridad": 6,
+        "cuantia": "Hasta 14.000€ por vivienda.",
+        "enlace": "https://www.comunidad.madrid/servicios/vivienda/plan-adapta-madrid-2024",
+        "requisitos": { "comunidad_autonoma": "madrid", "discapacidad_personal": ["33_a_64", "mas_65"] }
+    },
+    {
+        "id": "ayuda_autonomos_cataluna",
+        "nombre": "Ayuda para jóvenes autónomos - Cataluña",
+        "descripcion": "Subvención para jóvenes de entre 18 y 29 años que se den de alta como autónomos.",
+        "organismo": "Generalitat de Catalunya",
+        "tipo": "autonomico", "prioridad": 8,
+        "cuantia": "Hasta 15.876€ (pago único).",
+        "enlace": "https://canalempresa.gencat.cat/es/01_que_voleu_fer/mes_tema/ajuts_i_financament/cercador_d_ajuts/fitxa/index.html?id=30006",
+        "requisitos": { "comunidad_autonoma": "cataluna", "edad": "18_25", "situacion_laboral": "autonomo" }
+    },
+    {
+        "id": "ayuda_transporte_canarias",
+        "nombre": "Bono Residente Canario",
+        "descripcion": "Subvención del 75% en los billetes de transporte aéreo y marítimo entre las islas y con la península para residentes.",
+        "organismo": "Gobierno de Canarias / Ministerio de Transportes",
+        "tipo": "autonomico", "prioridad": 5,
+        "cuantia": "75% de descuento en billetes.",
+        "enlace": "https://www.gobiernodecanarias.org/transporte/temas/transporte_de_pasajeros/subvenciones/",
+        "requisitos": { "comunidad_autonoma": "canarias" }
+    },
+    {
+        "id": "ayuda_natalidad_castilla_leon",
+        "nombre": "Bono Nacimiento - Castilla y León",
+        "descripcion": "Ayuda directa por nacimiento o adopción, en forma de tarjeta prepago para gastar en productos infantiles.",
+        "organismo": "Junta de Castilla y León",
+        "tipo": "autonomico", "prioridad": 7,
+        "cuantia": "Hasta 2.500€ por hijo.",
+        "enlace": "https://www.tramitacastillayleon.jcyl.es/web/jcyl/AdministracionElectronica/es/Plantilla100Detalle/1251181054765/Ayuda/1285250917260/Propuesta",
+        "requisitos": { "comunidad_autonoma": "castilla_leon", "hijos_a_cargo": "si" }
+    }
+  ]
+}

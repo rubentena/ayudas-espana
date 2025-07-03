@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyudasEspaña - Encuentra tus ayudas y prestaciones</title>
+    <meta name="description" content="Descubre todas las ayudas y prestaciones oficiales del Estado español que puedes solicitar">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <!-- Añadido id="logo" al enlace del logo -->
+                <a href="#" id="logo" class="logo">AyudasEspaña</a>
+                <span class="tagline">Encuentra tus prestaciones oficiales</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="welcome-section" class="section active">
+            <div class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Encuentra todas tus ayudas y prestaciones</h1>
+                        <p>Te ayudamos a descubrir todas las ayudas oficiales del Estado español que puedes solicitar según tu situación personal de forma rápida y sencilla.</p>
+                        
+                        <div class="disclaimer">
+                            <strong>Información orientativa:</strong> Los datos mostrados son orientativos y pueden cambiar. Consulta siempre las fuentes oficiales antes de realizar cualquier solicitud.
+                        </div>
+                        
+                        <button id="start-btn" class="btn-primary">Comenzar evaluación</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="questionnaire-section" class="section">
+            <div class="questionnaire">
+                <div class="container">
+                    <!-- Nuevo contador de ayudas -->
+                    <div class="aids-counter">
+                        <span id="aids-count-total">--</span> ayudas disponibles. <span id="aids-count-possible">--</span> todavía posibles.
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                    
+                    <div id="question-container" class="question-card">
+                        <!-- Preguntas dinámicas -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="results-section" class="section">
+            <div class="results">
+                <div class="container">
+                    <div class="results-header">
+                        <h2>Tus ayudas disponibles</h2>
+                        <p>Basándose en tu situación personal, estas son las ayudas oficiales que puedes solicitar:</p>
+                    </div>
+                    
+                    <div id="results-container" class="results-grid">
+                        <!-- Resultados dinámicos -->
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <button id="restart-btn" class="btn-secondary">Nueva consulta</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="footer-text">&copy; 2025 AyudasEspaña - Información basada en fuentes oficiales</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/questionnaire.js"></script>
+    <script src="js/results.js"></script>
+</body>
+</html>
