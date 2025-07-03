@@ -1,4 +1,4 @@
-// js/main.js - Control principal de la aplicación
+// js/main.js - Control principal con navegación a secciones legales
 class AyudasEspanaApp {
     constructor() {
         this.currentSection = 'welcome-section';
@@ -11,36 +11,36 @@ class AyudasEspanaApp {
     }
 
     bindEvents() {
-        const startBtn = document.getElementById('start-btn');
-        if (startBtn) {
-            startBtn.addEventListener('click', () => {
-                this.showSection('questionnaire-section');
-                if (window.questionnaire) {
-                    window.questionnaire.start();
-                }
-            });
-        }
+        // --- Botones principales ---
+        document.getElementById('start-btn')?.addEventListener('click', () => {
+            this.showSection('questionnaire-section');
+            window.questionnaire?.start();
+        });
 
-        const restartBtn = document.getElementById('restart-btn');
-        if (restartBtn) {
-            restartBtn.addEventListener('click', () => {
-                this.restart();
-            });
-        }
+        document.getElementById('restart-btn')?.addEventListener('click', () => this.restart());
+        document.getElementById('logo')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.restart();
+        });
 
-        // --- NUEVA FUNCIONALIDAD: Logo clicable ---
-        const logo = document.getElementById('logo');
-        if (logo) {
-            logo.addEventListener('click', (e) => {
-                e.preventDefault(); // Evita que el enlace recargue la página
-                this.restart();
-            });
-        }
+        // --- NUEVO: Enlaces y botones de secciones legales ---
+        document.getElementById('legal-notice-link')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.showSection('legal-notice-section');
+        });
+        
+        document.getElementById('terms-of-use-link')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.showSection('terms-of-use-section');
+        });
+
+        document.querySelectorAll('.back-to-home').forEach(button => {
+            button.addEventListener('click', () => this.restart());
+        });
     }
 
     showSection(sectionId) {
-        const sections = document.querySelectorAll('.section');
-        sections.forEach(section => {
+        document.querySelectorAll('.section').forEach(section => {
             section.classList.remove('active');
         });
 
@@ -50,23 +50,16 @@ class AyudasEspanaApp {
             this.currentSection = sectionId;
         }
 
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     showResults(results) {
         this.showSection('results-section');
-        if (window.resultsManager) {
-            window.resultsManager.displayResults(results);
-        }
+        window.resultsManager?.displayResults(results);
     }
 
     restart() {
-        if (window.questionnaire) {
-            window.questionnaire.reset();
-        }
+        window.questionnaire?.reset();
         this.showSection('welcome-section');
     }
 }

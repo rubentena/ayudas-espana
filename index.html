@@ -11,7 +11,6 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <!-- Añadido id="logo" al enlace del logo -->
                 <a href="#" id="logo" class="logo">AyudasEspaña</a>
                 <span class="tagline">Encuentra tus prestaciones oficiales</span>
             </div>
@@ -19,42 +18,38 @@
     </header>
 
     <main>
+        <!-- Sección de Bienvenida (Principal) -->
         <section id="welcome-section" class="section active">
             <div class="hero">
                 <div class="container">
                     <div class="hero-content">
                         <h1>Encuentra todas tus ayudas y prestaciones</h1>
                         <p>Te ayudamos a descubrir todas las ayudas oficiales del Estado español que puedes solicitar según tu situación personal de forma rápida y sencilla.</p>
-                        
                         <div class="disclaimer">
                             <strong>Información orientativa:</strong> Los datos mostrados son orientativos y pueden cambiar. Consulta siempre las fuentes oficiales antes de realizar cualquier solicitud.
                         </div>
-                        
                         <button id="start-btn" class="btn-primary">Comenzar evaluación</button>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Sección del Cuestionario -->
         <section id="questionnaire-section" class="section">
             <div class="questionnaire">
                 <div class="container">
-                    <!-- Nuevo contador de ayudas -->
                     <div class="aids-counter">
                         <span id="aids-count-total">--</span> ayudas disponibles. <span id="aids-count-possible">--</span> todavía posibles.
                     </div>
-                    
                     <div class="progress-container">
                         <div class="progress-bar" id="progress-bar"></div>
                     </div>
-                    
-                    <div id="question-container" class="question-card">
-                        <!-- Preguntas dinámicas -->
-                    </div>
+                    <div id="question-container" class="question-card"></div>
                 </div>
             </div>
         </section>
 
+        <!-- Sección de Resultados -->
         <section id="results-section" class="section">
             <div class="results">
                 <div class="container">
@@ -62,22 +57,53 @@
                         <h2>Tus ayudas disponibles</h2>
                         <p>Basándose en tu situación personal, estas son las ayudas oficiales que puedes solicitar:</p>
                     </div>
-                    
-                    <div id="results-container" class="results-grid">
-                        <!-- Resultados dinámicos -->
-                    </div>
-                    
-                    <div style="text-align: center;">
+                    <div id="results-container" class="results-grid"></div>
+                    <div style="text-align: center; margin-top: 40px;">
                         <button id="restart-btn" class="btn-secondary">Nueva consulta</button>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Sección Aviso Legal -->
+        <section id="legal-notice-section" class="section">
+            <div class="container legal-content">
+                <h2>Aviso Legal</h2>
+                <p><strong>Responsable:</strong> Ruben Tena Martinez</p>
+                <p><strong>Finalidad:</strong> El presente sitio web "AyudasEspaña" es una herramienta informativa de carácter orientativo, desarrollada como un proyecto personal sin ánimo de lucro. Su único objetivo es guiar a los usuarios sobre las posibles ayudas y prestaciones sociales disponibles en España basándose en la información proporcionada.</p>
+                <p><strong>Limitación de Responsabilidad:</strong> La información contenida en esta web se basa en fuentes públicas y oficiales, pero no constituye asesoramiento legal, financiero ni de ninguna otra índole. El responsable no garantiza la exactitud, integridad o vigencia de la información. Las cuantías, requisitos y condiciones de las ayudas pueden cambiar sin previo aviso. Es responsabilidad exclusiva del usuario verificar toda la información en las fuentes oficiales correspondientes antes de iniciar cualquier trámite.</p>
+                <p><strong>Propiedad Intelectual:</strong> El código, diseño y estructura de esta herramienta son propiedad de Ruben Tena Martinez. Los textos descriptivos de las ayudas y los enlaces externos pertenecen a sus respectivos organismos oficiales.</p>
+                <button class="btn-secondary back-to-home">Volver a la página principal</button>
+            </div>
+        </section>
+
+        <!-- Sección Términos de Uso -->
+        <section id="terms-of-use-section" class="section">
+            <div class="container legal-content">
+                <h2>Términos de Uso</h2>
+                <p><strong>1. Aceptación de los Términos:</strong> El uso de "AyudasEspaña" implica la aceptación plena y sin reservas de todos y cada uno de los términos aquí expuestos.</p>
+                <p><strong>2. Objeto del Servicio:</strong> El servicio es un simulador informativo y gratuito. No realiza trámites, no almacena datos personales de forma persistente más allá de la sesión activa del navegador y no garantiza la concesión de ninguna ayuda.</p>
+                <p><strong>3. Obligaciones del Usuario:</strong> El usuario se compromete a utilizar la herramienta de forma lícita y con fines meramente informativos. Queda prohibido cualquier uso que pueda dañar, sobrecargar o deteriorar el sitio web.</p>
+                <p><strong>4. Exclusión de Garantías:</strong> Esta herramienta se proporciona "tal cual". El responsable no ofrece garantías de ningún tipo sobre la infalibilidad del sistema o la ausencia de errores. Los resultados del cuestionario son simulaciones y deben ser considerados como una primera orientación.</p>
+                <p><strong>5. Modificaciones:</strong> El responsable se reserva el derecho de modificar, sin previo aviso, tanto la estructura y el contenido de la web como los presentes términos de uso.</p>
+                <button class="btn-secondary back-to-home">Volver a la página principal</button>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer Actualizado con el enlace final y correcto -->
     <footer>
         <div class="container">
-            <p class="footer-text">&copy; 2025 AyudasEspaña - Información basada en fuentes oficiales</p>
+            <div class="footer-links">
+                <a href="#" id="legal-notice-link">Aviso Legal</a>
+                <span>&bull;</span>
+                <a href="#" id="terms-of-use-link">Términos de Uso</a>
+            </div>
+            <p class="footer-text">
+                &copy; 2025 Creado por 
+                <!-- ENLACE FINAL Y CORRECTAMENTE CODIFICADO -->
+                <a href="https://www.linkedin.com/in/rub%C3%A9n-t-17b238a2" target="_blank" rel="noopener noreferrer">Ruben Tena Martinez</a>.
+            </p>
         </div>
     </footer>
 
